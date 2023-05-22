@@ -9,7 +9,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url(/assents/img/fundo.jpg);
+    background-image: url(../img/fundo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 15px;
@@ -168,7 +168,7 @@ progress::-moz-progress-value{
 #main{
     text-align: center;
     align-items: center;
-    background-image: url(../assents/img/fundo.jpg);
+    background-image: url(../img/fundo.jpg);
     background-repeat: no-repeat;
     font-family: Helvetica;
     color: #eee;
