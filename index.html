@@ -14,47 +14,47 @@
                 <legend>Fórmulário de cadastro</legend>
                 <progress id="progress" value="0" max="100"></progress> 
                 <div class="inputBox">
-                    <input type="text" name="name" id="name" class="inputUser" autocomplate="off">
+                    <input type="text" name="name[query]" id="name" class="inputUser" autocomplate="off">
                     <label name="name" for="nome" class="labelInput">Nome completo</label>
                 </div>
                 <div class="inputBox">
-                    <input type="text" name="email" id="email" class="inputUser" autocomplate="off">
+                    <input type="text" name="email[query]" id="email" class="inputUser" autocomplate="off">
                     <label name="email" for="email" class="labelInput">E-mail</label>
                 </div>
                 <div class="inputBox">                    
-                    <input type="date" name="number" id="date" class="inputUser" autocomplate="off">   
+                    <input type="text" name="date[query]" id="date" class="inputUser" autocomplate="off">   
                     <label name="date" for="date" class="labelInput"><b>Data de Nascimento:</b></label>
                 </div>
                 <div class="inputBox">
-                    <input name="cpf" type="text" maxlength="14" id="campo_cpf" class="inputUser" autocomplate="off">
+                    <input name="cpf[query]" type="text" maxlength="14" id="campo_cpf" class="inputUser" autocomplate="off">
                     <label name="number" class="labelInput">CPF:</label>
                 </div>
                 <div class="inputBox">
-                    <input name="phone" type="text" id="campo_celular" maxlength="15" class="inputUser" autocomplate="off" onkeyup="handlePhone(event)" >
+                    <input name="phone[query]" type="text" id="campo_celular" maxlength="15" class="inputUser" autocomplate="off" onkeyup="handlePhone(event)" >
                     <label name="phone" class="labelInput">Celular: </label>
                 </div>
                 <div class="genero">
                     <p>Sexo:</p>
-                    <input type="radio" id="feminino" name="genero" value="feminino" >
+                    <input type="radio" id="feminino" name="campo" value="feminino" >
                     <label for="feminino">Feminino</label>
                     
-                    <input type="radio" id="masculino" name="genero" value="masculino" >
+                    <input type="radio" id="masculino" name="campor" value="masculino" >
                     <label for="masculino">Masculino</label>
                     
-                    <input type="radio" id="outro" name="genero" value="outro" >
+                    <input type="radio" id="outro" name="campor" value="outro" >
                     <label for="outro">Outro</label>
                 </div>
                 <div class="inputBox">
-                    <input type="text" name="city" id="city" class="inputUser" autocomplate="off">
+                    <input type="text" name="city[query]" id="city" class="inputUser" autocomplate="off">
                     <label name="city" for="city" class="labelInput">Cidade</label>
                 </div>
                 <div class="inputBox">
-                    <input type="text" name="state" id="state" class="inputUser" autocomplate="off">
+                    <input type="text" name="stete[query]" id="state" class="inputUser" autocomplate="off">
                     <label name="state" for="state" class="labelInput">Estado</label>
                 </div>
                 <div class="inputBox">
                     <label class="labelInput">Mensagem: </label>
-                    <textarea type="text" name="message" id="message" rows="5" placeholder="*Deixe uma mensagem*" autocomplate="off"></textarea>        
+                    <textarea type="text" name="message[query]" id="message" rows="5" placeholder="*Deixe uma mensagem*" autocomplate="off"></textarea>        
                     <button type="submit"> Enviar</button>   
                 </div>
                 
