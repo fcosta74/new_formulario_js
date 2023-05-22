@@ -1,0 +1,156 @@
+const form = document.querySelector("#form")
+const nameInput = document.querySelector("#name")
+const emailInput = document.querySelector("#email")
+const dateInput = document.querySelector("#date")
+const cpfInput = document.querySelector("#campo_cpf")
+const phoneInput = document.querySelector("#campo_celular")
+const cityInput = document.querySelector("#city")
+const stateInput = document.querySelector("#state")
+const messageTextarea = document.querySelector("#message")
+
+
+const progress = document.querySelector("#progress")
+
+const modal = document.querySelector("#modal")
+const closeButton = document.querySelector("#close-button")
+const modalMessage = document.querySelector(".modal-message")
+
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault()
+
+  // verificar se o nome está vazio
+  if (nameInput.value === ""){
+    showModal("Por favor, preencha o seu nome")
+    return
+  }
+ 
+  // verificar se o e-mail está vázio
+  if (emailInput.value === "" || !isEmailValid(emailInput.value)){
+    showModal("Por favor, preenha um e-mail válido")
+    return
+  }
+
+  // verificar se a data de nacimento foi preencida
+  if(dateInput.value === ""){
+    showModal("Por favor, preencha a data do seu nascimento")
+    return
+  }
+
+  // verificar se o cpf foi digitado
+  if(!validateCpf(cpfInput.value, 11)){
+    showModal("Por favor, digite o seu CPF válido")
+    return
+  }
+
+  // verificar se o telefone está preenchido
+  if (!validatePhone(phoneInput.value, 11)){
+    showModal("Por favo, o telefone precisa ter no mínimo 11 dígitos.")
+    return
+  }
+  // verificar se a cidade está preenchido
+  if (cityInput.value === ""){
+    showModal("Por favor, digite o nome da sua cidade.")
+    return
+  }
+  // verificar se a cidade está preenchido
+  if (stateInput.value === ""){
+    showModal("Por favor, digite o nome do seu estado.")
+    return
+  }
+  // verificar se a mensagem foi preenchida
+  if(messageTextarea.value == ""){
+    showModal("Por favor, digite uma mensagem.")
+
+    return
+  }
+  // se todos os campos estiverem corretamente preenchidos, envie o formulário
+  form.submit()
+
+  progress.va = 1
+})
+// função que valida o e-mail
+function isEmailValid(email){
+  // cria uma regex para validar email
+  const emailRegex = new RegExp(
+    /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
+  )
+  if(emailRegex.test(email)){
+    return true
+  }   
+  return false
+}
+function validateCpf(cpf, minDigits){
+  if(cpf.length >= minDigits){
+  // telefone válido
+  return true
+  }
+  return false
+}
+
+
+// função que valida o telefone
+function validatePhone(phone, minDigits){
+  if(phone.length >= minDigits){
+  // telefone válido
+  return true
+  }
+  return false
+}
+// atualiza a barra de progresso ao preencher o formulário
+form.addEventListener("input", () => {
+  const totalFields = form.elements.length -1
+  let completedFields = 0
+
+  // conta o número de campos preenchidos
+  for (let i = 0; i < totalFields; i++){
+    if (form.elements[i].value){
+      completedFields++
+    }
+  }
+  // atualiza o valor da barra de progresso
+  progress.value = (completedFields / totalFields) * 110
+})
+// Exibir modal
+function showModal(msg) {
+  modalMessage.textContent = msg;
+  modal.style.display = "block";
+}
+
+// Fechar modal
+closeButton.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+
+// validar o CPF
+cpfInput.addEventListener('keypress', () => {
+  let cpfInputLength = cpfInput.value.length
+
+  // MAX LENGHT 14  CPF
+  if (cpfInputLength == 3 || cpfInputLength == 7) {
+      cpfInput.value += '.'
+  }else if (cpfInputLength == 11) {
+      cpfInput.value += '-'
+  }
+
+})
+
+const handlePhone = (event) => {
+  let phoneInput = event.target
+  phoneInput.value = phoneMask(phoneInput.value)
+}
+
+const phoneMask = (value) => {
+  if (!value) return ""
+  value = value.replace(/\D/g,'')
+  value = value.replace(/(\d{2})(\d)/,"($1) $2")
+  value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+  return value
+}
