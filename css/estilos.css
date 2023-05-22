@@ -198,8 +198,8 @@ progress::-moz-progress-value{
 }  
 @media (max-width: 450px) {
 
-    #form {
-        width: 95%;
+    fieldset {
+        width: 1rem;
         height: 100%;
     }
     input{
@@ -207,8 +207,13 @@ progress::-moz-progress-value{
     }
     textarea{
         font-size: 15px;
-        height: 140px;
-        width: 140px;
-    }
 
+    }
+    .inputBox{
+        margin: 2rem 1rem;
+        background: none;
+    }
+    .modal-content {
+        width: 75%;
+    }
 }
