@@ -217,4 +217,7 @@ progress::-moz-progress-value{
     .modal-content {
         width: 75%;
     }
+    #main{
+        margin-bottom: 5.5rem;
+    }
 }
