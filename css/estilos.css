@@ -65,24 +65,14 @@ select{
     font-size: 1rem;
     border: 2px solid greenyellow;  
     border-radius: 5px;
-    width: 10rem;
     margin-bottom: 1rem;
 }
-.genero{
-    margin: 0 1rem;
+#selectId{
     color: #fff;
+    margin-left: 1.5rem;
+
     font-size: 1.2rem;
-}
-select #genero{
-    display: flex;
-}
-.state{
-    margin-left: 1rem;
-    color: #fff;
-    font-size: 1.2rem;
-}
-select #state{
-    display: flex;
+
 }
 button {
     background: none;
@@ -179,7 +169,7 @@ progress::-webkit-progress-value{
     margin-bottom: 3rem;
 }
 .paragrafo{
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 3rem;
 }
@@ -192,9 +182,10 @@ progress::-webkit-progress-value{
     font-weight: bold;
     transition: all 0.5s;
     border: none;
+    border-radius: 10px;
 }
 .btn:hover{
-    border-radius: 16px;
+    border-radius: 20px;
 }  
 @media (max-width: 450px) {
     fieldset {
