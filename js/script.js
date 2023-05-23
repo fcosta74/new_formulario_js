@@ -4,6 +4,7 @@ const emailInput = document.querySelector("#email")
 const dateInput = document.querySelector("#date")
 const cpfInput = document.querySelector("#campo_cpf")
 const phoneInput = document.querySelector("#campo_celular")
+const generoInput = document.querySelector("#genero")
 const cityInput = document.querySelector("#city")
 const stateInput = document.querySelector("#state")
 const messageTextarea = document.querySelector("#message")
@@ -45,7 +46,12 @@ form.addEventListener("submit", (event) => {
 
   // verificar se o telefone está preenchido
   if (!validatePhone(phoneInput.value, 11)){
-    showModal("Por favo, o telefone precisa ter no mínimo 11 dígitos.")
+    showModal("Por favor, o telefone precisa ter no mínimo 11 dígitos.")
+    return
+  }
+  // verificaqr o genero
+  if (generoInput.value === ""){
+    showModal("Qual o seu genero?")
     return
   }
   // verificar se a cidade está preenchido
@@ -55,7 +61,7 @@ form.addEventListener("submit", (event) => {
   }
   // verificar se a cidade está preenchido
   if (stateInput.value === ""){
-    showModal("Por favor, digite o nome do seu estado.")
+    showModal("Qaul o seu estado?")
     return
   }
   // verificar se a mensagem foi preenchida
@@ -99,7 +105,7 @@ function validatePhone(phone, minDigits){
 }
 // atualiza a barra de progresso ao preencher o formulário
 form.addEventListener("input", () => {
-  const totalFields = form.elements.length -1
+  const totalFields = form.elements.length -2
   let completedFields = 0
 
   // conta o número de campos preenchidos
@@ -109,7 +115,7 @@ form.addEventListener("input", () => {
     }
   }
   // atualiza o valor da barra de progresso
-  progress.value = (completedFields / totalFields) * 110
+  progress.value = (completedFields / totalFields) * 120
 })
 // Exibir modal
 function showModal(msg) {
@@ -127,7 +133,6 @@ window.addEventListener("click", (event) => {
     modal.style.display = "none";
   }
 });
-
 
 // validar data de nascimento
 dateInput.addEventListener('keydown', () => {
@@ -167,3 +172,4 @@ const phoneMask = (value) => {
   value = value.replace(/(\d)(\d{4})$/,"$1-$2")
   return value
 }
+
