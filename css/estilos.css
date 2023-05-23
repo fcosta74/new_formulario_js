@@ -219,5 +219,6 @@ progress::-moz-progress-value{
     }
     #main{
         margin-bottom: 7rem;
+	heigth: 100%;
     }
 }
