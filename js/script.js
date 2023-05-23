@@ -129,8 +129,19 @@ window.addEventListener("click", (event) => {
 });
 
 
+// validar data de nascimento
+dateInput.addEventListener('keydown', () => {
+  let dateInputLength = dateInput.value.length
+
+  // max lenght 8 data de nascimento
+  if (dateInputLength == 2 ) {
+    dateInput.value += '/'
+  }else if (dateInputLength == 5) {
+    dateInput.value += '/'
+}
+})
 // validar o CPF
-cpfInput.addEventListener('keypress', () => {
+cpfInput.addEventListener('keydown', () => {
   let cpfInputLength = cpfInput.value.length
 
   // MAX LENGHT 14  CPF
@@ -141,6 +152,8 @@ cpfInput.addEventListener('keypress', () => {
   }
 
 })
+
+// validar data telefone
 
 const handlePhone = (event) => {
   let phoneInput = event.target

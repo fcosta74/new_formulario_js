@@ -157,7 +157,9 @@ progress::-webkit-progress-bar{
 #main{
     text-align: center;
     align-items: center;
-    justify-content: center;
+    background-image: url(../img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: Helvetica;
     color: #eee;
     margin-top: 6rem;
@@ -204,4 +206,5 @@ progress::-webkit-progress-bar{
         margin-bottom: 5.5rem;
         min-height: 65vh;
     }
+
 }
