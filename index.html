@@ -14,23 +14,23 @@
                 <legend>Fórmulário de cadastro</legend>
                 <progress id="progress" value="0" max="100"></progress> 
                 <div class="inputBox">
-                    <input type="text" name="name[query]" id="name" class="inputUser" autocomplate="off">
+                    <input type="text" name="name" id="name" class="inputUser" >
                     <label name="name" for="nome" class="labelInput">Nome completo</label>
                 </div>
                 <div class="inputBox">
-                    <input type="text" name="email[query]" id="email" class="inputUser" autocomplate="off">
+                    <input type="text" name="email" id="email" class="inputUser" >
                     <label name="email" for="email" class="labelInput">E-mail</label>
                 </div>
                 <div class="inputBox">                    
-                    <input type="text" name="date[query]" id="date" class="inputUser" autocomplate="off">   
+                    <input type="text" name="date" id="date" class="inputUser" >   
                     <label name="date" for="date" class="labelInput"><b>Data de Nascimento:</b></label>
                 </div>
                 <div class="inputBox">
-                    <input name="cpf[query]" type="text" maxlength="14" id="campo_cpf" class="inputUser" autocomplate="off">
+                    <input name="cpf" type="text" maxlength="14" id="campo_cpf" class="inputUser" >
                     <label name="number" class="labelInput">CPF:</label>
                 </div>
                 <div class="inputBox">
-                    <input name="phone[query]" type="text" id="campo_celular" maxlength="15" class="inputUser" autocomplate="off" onkeyup="handlePhone(event)" >
+                    <input name="phone" type="text" id="campo_celular" maxlength="15" class="inputUser" onkeyup="handlePhone(event)" >
                     <label name="phone" class="labelInput">Celular: </label>
                 </div>
                 <label class="genero" name="genero" for="genero">Sexo:</label>
@@ -42,7 +42,7 @@
                 </select>
                 </div>
                 <div class="inputBox">
-                    <input type="text" name="city[query]" id="city" class="inputUser" autocomplate="off">
+                    <input type="text" name="city" id="city" class="inputUser">
                     <label name="city" for="city" class="labelInput">Cidade</label>
                 </div>
                 <label class="state" name="state" for="state">Estado:</label>
@@ -77,15 +77,11 @@
                     <option value="TO">Tocantins</option>
                     <option value="EX">Estrangeiro</option>
                 </select>
-                
-
                 <div class="inputBox">
-                    <label class="labelInput">Mensagem: </label>
-                    <textarea type="text" name="message[query]" id="message" rows="5" placeholder="*Deixe uma mensagem*" autocomplate="off"></textarea>        
+                    <label class="labelInput" id="labelid">Mensagem: </label>
+                    <textarea type="text" name="message" id="message" rows="5" placeholder="*Deixe uma mensagem*" ></textarea>        
                     <button type="submit"> Enviar</button>   
                 </div>
-                
-                
                 <input type="hidden" name="accessKey" value="87b07ec0-6e23-4459-ad92-f71ec5c1c349">
                 <input type="hidden" name="redirectTo" value="https://fcosta74.github.io/new_formulario_js/obrigado.html">
             </fieldset>
