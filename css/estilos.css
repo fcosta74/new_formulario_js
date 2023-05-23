@@ -170,6 +170,7 @@ progress::-moz-progress-value{
     align-items: center;
     background-image: url(../img/fundo.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     font-family: Helvetica;
     color: #eee;
     margin-top: 10rem;
