@@ -2,27 +2,24 @@
     font-family: Heelvetica;
     font-weight: bold;
     box-sizing: border-box;
-    
 }
 body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     background-image: url(../img/fundo.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-color: #fff;
 }
 legend{
     color: #fff;
     padding: 10px;
     text-align: center;
+    font-size: 1.3rem;
 }
 fieldset{
     width: 20rem;
     border: 1px solid greenyellow;
     border-radius: 10px;
+    margin: 0 auto;
 }
 input{
     background: none;
@@ -51,7 +48,7 @@ input{
     left: 0px;
     pointer-events: none;
     color: #fff;
-    font-size: .8rem;
+    font-size: 1rem;
 }
 
 .inputUser:focus ~ .labelInput{
@@ -68,13 +65,13 @@ input{
 }
 .genero{
     color: #fff;
-    letter-spacing: 1px;
-    margin: 1rem 1rem;
+    letter-spacing: 0.5px;
+    margin-left: 1rem;
     font-weight: bold;
     display: block;
 }
 .genero p{
-    margin-top: -1rem;
+    margin-top: -1.5rem;
 }
 button {
     background: none;
@@ -120,15 +117,7 @@ progress{
 }
 
 progress::-webkit-progress-bar{
-    background-color: yellowgreen;
-    border-radius: 5px;
-}
-progress::-moz-progress-value{
-    background-color: #888;
-    border-radius: 5px;
-}
-progress::-moz-progress-value{
-    background-color: #888;
+    background-color: #fff;
     border-radius: 5px;
 }
 /* Modal */
@@ -168,11 +157,10 @@ progress::-moz-progress-value{
 #main{
     text-align: center;
     align-items: center;
-    background-image: url(../img/fundo.jpg);
-    background-repeat: no-repeat;
+    justify-content: center;
     font-family: Helvetica;
     color: #eee;
-    margin-top: 10rem;
+    margin-top: 6rem;
 }
 .text{
     font-size: 45px;
@@ -197,7 +185,6 @@ progress::-moz-progress-value{
     border-radius: 16px;
 }  
 @media (max-width: 450px) {
-
     fieldset {
         width: 1rem;
         height: 100%;
@@ -213,7 +200,8 @@ progress::-moz-progress-value{
         margin: 2rem 1rem;
         background: none;
     }
-    .modal-content {
-        width: 75%;
+    #main{
+        margin-bottom: 5.5rem;
+        min-height: 65vh;
     }
 }
