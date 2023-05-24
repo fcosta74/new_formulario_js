@@ -14,23 +14,23 @@
                 <legend>Fórmulário de cadastro</legend>
                 <progress id="progress" value="0" max="100"></progress> 
                 <div class="inputBox">
-                    <input type="text" name="name" id="name" class="inputUser" onkeypress="return ApenasLetras(event)">
+                    <input type="text" name="name" id="name" class="inputUser" onkeypress="return ApenasLetras(event)" autocomplete="off">
                     <label name="name" for="name" class="labelInput">Nome completo</label>
                 </div>
                 <div class="inputBox">
-                    <input type="text" name="email" id="email" class="inputUser" >
+                    <input type="text" name="email" id="email" class="inputUser" autocomplete="off">
                     <label name="email" for="email" class="labelInput">E-mail</label>
                 </div>
                 <div class="inputBox">                    
-                    <input type="text" id="date" maxlength="10" class="inputUser" name="date" placeholder="dd/mm/aaaa" >   
+                    <input type="text" id="date" maxlength="10" class="inputUser" name="date" placeholder="dd/mm/aaaa" autocomplete="off">   
                     <label name="date" for="date" class="labelInput"><b>Data de Nascimento:</b></label>
                 </div>
                 <div class="inputBox">
-                    <input type="text" maxlength="14" id="campo_cpf" class="inputUser" name="cpf" onkeypress="return filtroTeclas(event)">
+                    <input type="text" maxlength="14" id="campo_cpf" class="inputUser" name="cpf" onkeypress="return filtroTeclas(event)" autocomplete="off">
                     <label name="number" class="labelInput">CPF:</label>
                 </div>
                 <div class="inputBox">
-                    <input name="phone" type="text" id="campo_celular" maxlength="15" class="inputUser" onkeyup="handlePhone(event)" >
+                    <input name="phone" type="text" id="campo_celular" maxlength="15" class="inputUser" onkeyup="handlePhone(event)" autocomplete="off">
                     <label name="phone" class="labelInput">Celular: </label>
                 </div>
                 <div id="selectId">
@@ -43,7 +43,7 @@
                     </select>
                 </div>                
                 <div class="inputBox">
-                    <input type="text" name="city" id="city" class="inputUser" onkeypress="return ApenasLetras(event)">
+                    <input type="text" name="city" id="city" class="inputUser" onkeypress="return ApenasLetras(event)" autocomplete="off">
                     <label name="city" for="city" class="labelInput">Cidade</label>
                 </div>
                 <div id="selectId">
