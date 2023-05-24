@@ -177,9 +177,6 @@ const filtroTeclas = function(events){
   return((events.charCode == 8) || (events.charCode > 47 && events.charCode < 58) || (events.charCode == 45 || events.charCode == 46))
 }
 
-
-
-
 nameInput.addEventListener("keypress", function(e) {
   const which = e.which 
 })

@@ -167,10 +167,10 @@ progress::-webkit-progress-value{
     justify-content: center;
     font-family: Helvetica;
     color: #eee;
-    margin: 5rem auto;
+    margin: 30vh auto;
 }
 .text{
-    font-size: 3rem;    
+    font-size: 3rem; 
 }
 .paragrafo{
     font-size: 1.5rem;
@@ -209,7 +209,7 @@ progress::-webkit-progress-value{
     #main{
         margin: 5rem auto;
         width: 70vw;
-        height: 95vh;
+        height: 81.5vh;
     }
     .text{
         font-size: 2.5rem;
