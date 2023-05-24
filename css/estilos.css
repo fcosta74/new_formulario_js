@@ -162,16 +162,14 @@ progress::-webkit-progress-value{
     justify-content: center;
     font-family: Helvetica;
     color: #eee;
-    margin-top: 6rem;
+    margin: 5rem auto;
 }
 .text{
-    font-size: 45px;
-    margin-bottom: 3rem;
+    font-size: 3rem;    
 }
 .paragrafo{
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 3rem;
 }
 .btn{
     padding: 10px 30px;
@@ -204,7 +202,14 @@ progress::-webkit-progress-value{
         background: none;
     }
     #main{
-        margin-bottom: 5.5rem;
-        min-height: 65vh;
+        margin: 5rem auto;
+        width: 70vw;
+        height: 95vh;
+    }
+    .text{
+        font-size: 2.5rem;
+    }
+    .paragrafo{
+        font-size: 1.5rem;
     }
 }

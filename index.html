@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Formatação em um formulário</title>
+		<title>Formulário</title>
         <script src="js/script.js" defer></script>
         <link rel="shortcut icon" href="fcs.ico" type="image/x-icon">
         <link rel="stylesheet" href="css/estilos.css">
@@ -22,11 +22,11 @@
                     <label name="email" for="email" class="labelInput">E-mail</label>
                 </div>
                 <div class="inputBox">                    
-                    <input type="text" name="date" id="date" class="inputUser" >   
+                    <input type="text" id="date" maxlength="10" class="inputUser" name="date" placeholder="dd/mm/aaaa">   
                     <label name="date" for="date" class="labelInput"><b>Data de Nascimento:</b></label>
                 </div>
                 <div class="inputBox">
-                    <input name="cpf" type="text" maxlength="14" id="campo_cpf" class="inputUser" >
+                    <input type="text" maxlength="14" id="campo_cpf" class="inputUser" name="numbers">
                     <label name="number" class="labelInput">CPF:</label>
                 </div>
                 <div class="inputBox">
