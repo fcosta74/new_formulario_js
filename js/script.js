@@ -173,3 +173,30 @@ const phoneMask = (value) => {
   return value
 }
 
+const filtroTeclas = function(events){
+  return((events.charCode == 8) || (events.charCode > 47 && events.charCode < 58) || (events.charCode == 45 || events.charCode == 46))
+}
+
+
+
+
+nameInput.addEventListener("keypress", function(e) {
+  const which = e.which 
+})
+  function ApenasLetras(e, t) {
+    try {
+        if (window.event) {
+            var charCode = window.event.which;
+        } else if (e) {
+            var charCode = e.which;
+        } else {
+            return true;
+        }
+        if ((charCode == 32) || (charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 982))
+            return true;
+        else
+            return false;
+    } catch (err) {
+        alert(err.Description);
+    }
+}

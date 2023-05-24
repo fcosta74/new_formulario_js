@@ -14,19 +14,19 @@
                 <legend>Fórmulário de cadastro</legend>
                 <progress id="progress" value="0" max="100"></progress> 
                 <div class="inputBox">
-                    <input type="text" name="name" id="name" class="inputUser" >
-                    <label name="name" for="nome" class="labelInput">Nome completo</label>
+                    <input type="text" name="name" id="name" class="inputUser" onkeypress="return ApenasLetras(event)">
+                    <label name="name" for="name" class="labelInput">Nome completo</label>
                 </div>
                 <div class="inputBox">
                     <input type="text" name="email" id="email" class="inputUser" >
                     <label name="email" for="email" class="labelInput">E-mail</label>
                 </div>
                 <div class="inputBox">                    
-                    <input type="text" id="date" maxlength="10" class="inputUser" name="date" placeholder="dd/mm/aaaa">   
+                    <input type="text" id="date" maxlength="10" class="inputUser" name="date" placeholder="dd/mm/aaaa" >   
                     <label name="date" for="date" class="labelInput"><b>Data de Nascimento:</b></label>
                 </div>
                 <div class="inputBox">
-                    <input type="text" maxlength="14" id="campo_cpf" class="inputUser" name="numbers">
+                    <input type="text" maxlength="14" id="campo_cpf" class="inputUser" name="cpf" onkeypress="return filtroTeclas(event)">
                     <label name="number" class="labelInput">CPF:</label>
                 </div>
                 <div class="inputBox">
@@ -43,7 +43,7 @@
                     </select>
                 </div>                
                 <div class="inputBox">
-                    <input type="text" name="city" id="city" class="inputUser">
+                    <input type="text" name="city" id="city" class="inputUser" onkeypress="return ApenasLetras(event)">
                     <label name="city" for="city" class="labelInput">Cidade</label>
                 </div>
                 <div id="selectId">

@@ -66,13 +66,19 @@ select{
     border: 2px solid greenyellow;  
     border-radius: 5px;
     margin-bottom: 1rem;
+
 }
 #selectId{
     color: #fff;
     margin-left: 1.5rem;
-
-    font-size: 1.2rem;
-
+    font-size: 1rem;
+}
+#genero{
+    width: 13.86rem;
+    margin-left: 1rem;
+}
+#state{
+    width: 13.86rem;
 }
 button {
     background: none;
@@ -92,7 +98,6 @@ button:hover {
     background-color: greenyellow;
     color: #101026;
 }
-
 textarea{
     background: none;
     width: 18rem;
