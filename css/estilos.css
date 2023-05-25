@@ -16,7 +16,7 @@ legend{
     font-size: 1.3rem;
 }
 fieldset{
-    width: 20rem;
+    width: 23rem;
     border: 1px solid greenyellow;
     border-radius: 10px;
     margin: 0 auto;
@@ -36,46 +36,62 @@ input{
     border-bottom: 1px solid greenyellow;
     outline: none;
     font-size: 1rem;
-    width: 18rem;
-    letter-spacing: 1px;
-    padding-left: 0.5rem;
+    width: 19rem;
+    letter-spacing: 2px;
+    padding: 2px 7px;
     border-radius: 10px;
+
 }
 .labelInput{
     position: absolute;
-    top: -25px;
+    top: -19px;
     left: 0px;
     color: #fff;
     font-size: 1.2rem;
-    margin-left: .5rem;
+    margin-left: .4rem;
+    letter-spacing: 1.3px;
+    color: greenyellow;
 }
-
+#name,
+#city{
+    text-transform: uppercase;
+}
+#email{
+    text-transform: lowercase;
+    letter-spacing: 3px;
+}
 .inputUser:focus ~ .labelInput{
-    top: -15px;
+    display: flex;
     font-size: .8rem;
     color: greenyellow;
 }
 ::-webkit-input-placeholder{
     color: #fff;
 }
-#labelid{
-    margin-top: 1rem;
+#date{
+    height: 2rem;
+    letter-spacing: 3px;
 }
 select{
+    border: 1px solid greenyellow;
     font-size: 1rem;
-    border: 2px solid greenyellow;  
     border-radius: 5px;
     margin-bottom: 1rem;
-
+    background-color: #101026;
+    background-image: url('../img/fundo.jpg');
+    color: #fff;
+    letter-spacing: 1.5px;
+    padding: 3px;
 }
 #selectId{
-    color: #fff;
+    color: greenyellow;
     margin-left: 1.5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 #genero{
     width: 13.86rem;
     margin-left: 1rem;
+    
 }
 #state{
     width: 13.86rem;
@@ -85,7 +101,7 @@ button {
     cursor: pointer;
 	color: #fff;
 	border-radius: 5px; 
-    width: 18rem;
+    width: 19rem;
     align-items: center;
     font-size: 1.3rem;
     font-weight: bold;
@@ -98,24 +114,24 @@ button:hover {
     background-color: greenyellow;
     color: #101026;
 }
+
 textarea{
     background: none;
-    width: 18rem;
+    width: 19rem;
     border: none;
     border-radius: 5px; 
     font-size: 1rem;
     border: 1px solid greenyellow;
     resize: none;
     padding: 0.6rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     color: #fff;
     outline: none;
     letter-spacing: 1px;
 }
-
 /* barra de progresso */
 progress{
-    width: 18rem;
+    width: 19rem;
     height: .5rem;
     margin: 1rem 1rem;
     border-radius: 10px;
@@ -140,27 +156,26 @@ progress::-webkit-progress-value{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
-  
 .modal-content {
     position: relative;
     background-color: #fff;
     margin: 15% auto;
-    padding: 20px;
-    border-radius: 5px;
-    width: 30%;
+    padding: 10px;
+    border-radius: 15px;
+    width: 24%;
+    height: 6rem;
 }
 #close-button {
-    color: #aaa;
+    color: #101026;
     float: right;
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
 }
 .modal-message {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
 }
-/* obrigado */
+/* sucesso */
 #main{
     text-align: center;
     align-items: center;
@@ -205,6 +220,9 @@ progress::-webkit-progress-value{
     .inputBox{
         margin: 2rem 1rem;
         background: none;
+    }
+    .modal-content{
+        width: 80%;
     }
     #main{
         margin: 5rem auto;

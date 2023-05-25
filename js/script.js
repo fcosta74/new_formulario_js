@@ -22,19 +22,19 @@ form.addEventListener("submit", (event) => {
 
   // verificar se o nome está vazio
   if (nameInput.value === ""){
-    showModal("Por favor, preencha o seu nome")
+    showModal("Por favor, digite o seu nome")
     return
   }
  
   // verificar se o e-mail está vázio
   if (emailInput.value === "" || !isEmailValid(emailInput.value)){
-    showModal("Por favor, preenha um e-mail válido")
+    showModal("Por favor, digite um e-mail válido")
     return
   }
 
   // verificar se a data de nacimento foi preencida
   if(dateInput.value === ""){
-    showModal("Por favor, preencha a data do seu nascimento")
+    showModal("Por favor, digite a data do seu nascimento")
     return
   }
 
@@ -46,7 +46,7 @@ form.addEventListener("submit", (event) => {
 
   // verificar se o telefone está preenchido
   if (!validatePhone(phoneInput.value, 11)){
-    showModal("Por favor, o telefone precisa ter no mínimo 11 dígitos.")
+    showModal("Por favor, digite o nº de telefone com DD.")
     return
   }
   // verificaqr o genero
@@ -61,7 +61,7 @@ form.addEventListener("submit", (event) => {
   }
   // verificar se a cidade está preenchido
   if (stateInput.value === ""){
-    showModal("Qaul o seu estado?")
+    showModal("Qual o seu estado?")
     return
   }
   // verificar se a mensagem foi preenchida
@@ -197,3 +197,4 @@ nameInput.addEventListener("keypress", function(e) {
         alert(err.Description);
     }
 }
+
